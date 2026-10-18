@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เพิ่มเอกสาร | KA Science DMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html">
+      <div class="brand-mark">KA</div>
+      <div><strong>KA Science</strong><small>ระบบจัดการเอกสาร</small></div>
+    </a>
+    <div class="nav-label">เมนูหลัก</div>
+    <nav class="nav"><a class="" href="dashboard.html"><span class="nav-icon">▦</span>ภาพรวม</a>
+<a class="" href="documents.html"><span class="nav-icon">▤</span>รายการเอกสาร</a>
+<a class="active" href="upload.html"><span class="nav-icon">＋</span>เพิ่มเอกสาร</a>
+<a class="" href="users.html"><span class="nav-icon">♙</span>จัดการผู้ใช้งาน</a>
+<a class="" href="audit-logs.html"><span class="nav-icon">◷</span>ประวัติการใช้งาน</a></nav>
+    <div class="sidebar-bottom">ระบบจัดการเอกสารอย่างปลอดภัย<br>เวอร์ชันตัวอย่างสำหรับพัฒนา</div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="breadcrumb">KA Science <span style="padding:0 7px;color:#b7c4d5">/</span> เพิ่มเอกสาร</div>
+      <div class="top-user">
+        <div class="avatar">ผด</div>
+        <div><strong>ผู้ดูแลระบบ</strong><small>ผู้ดูแลระบบ</small></div>
+        <a class="btn btn-light btn-small" href="login.html" title="ออกจากระบบ">ออกจากระบบ</a>
+      </div>
+    </header>
+    <section class="content">
+      <div class="page-heading"><div><h1>เพิ่มเอกสาร</h1><p>เพิ่มเอกสารเข้าสู่ศูนย์กลางข้อมูลของบริษัท</p></div></div>
+      
+<section class="panel">
+  <div class="panel-title"><div><h2>ข้อมูลเอกสาร</h2><p>กรอกรายละเอียดและเลือกไฟล์ที่ต้องการจัดเก็บ</p></div><span class="badge blue">เพิ่มเอกสาร</span></div>
+  <form data-demo-form id="uploadForm" enctype="multipart/form-data">
+    <div class="field full">
+      <label>ไฟล์เอกสาร</label>
+      <div class="dropzone"><div class="upload-symbol">⇧</div><strong>เลือกไฟล์จากคอมพิวเตอร์</strong><p>รองรับ PDF, Word, Excel และไฟล์เอกสารที่เกี่ยวข้อง</p><label class="btn btn-light" for="documentFile">เลือกไฟล์</label><input id="documentFile" name="documentFile" type="file" style="display:none" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt"><p id="fileName">ยังไม่ได้เลือกไฟล์</p></div>
+    </div>
+    <div class="form-grid" style="margin-top:22px">
+      <div class="field"><label for="docTitle">ชื่อเอกสาร *</label><input id="docTitle" name="docTitle" required placeholder="เช่น คู่มือเครื่องจักร รุ่น KS-200"></div>
+      <div class="field"><label for="docType">ประเภทเอกสาร *</label><select id="docType" name="docType" required><option value="">-- เลือกประเภทเอกสาร --</option><option>คู่มือการใช้งาน</option><option>เอกสารทางเทคนิค</option><option>ใบเสนอราคา</option><option>รายงานการซ่อม</option><option>รายการอะไหล่</option><option>เอกสารอื่น ๆ</option></select></div>
+      <div class="field"><label for="machine">ชื่อเครื่องจักร / รุ่น</label><input id="machine" name="machine" placeholder="เช่น KS-200"></div>
+      <div class="field"><label for="customer">ชื่อลูกค้า</label><input id="customer" name="customer" placeholder="กรอกชื่อลูกค้า (ถ้ามี)"></div>
+      <div class="field"><label for="department">แผนกที่เกี่ยวข้อง *</label><select id="department" name="department" required><option value="">-- เลือกแผนก --</option><option>ฝ่ายขาย</option><option>จัดซื้อ</option><option>วิศวกรรม</option><option>บริการหลังการขาย</option><option>ผู้ดูแลระบบ</option></select></div>
+      <div class="field"><label for="visibility">ระดับการเข้าถึง</label><select id="visibility" name="visibility" ><option value="Department">เฉพาะแผนก</option><option value="All">ทุกแผนก</option></select></div>
+      <div class="field full"><label for="description">รายละเอียดเพิ่มเติม</label><textarea id="description" name="description" placeholder="ระบุรายละเอียดของเอกสาร เช่น รุ่นเครื่องจักร วันที่จัดทำ หรือหมายเหตุ"></textarea></div>
+    </div>
+    
+    <div class="form-actions"><a class="btn btn-light" href="documents.html">ยกเลิก</a><button type="submit">อัปโหลดเอกสาร</button><p id="uploadMessage"></p></div>
+  </form>
+</section>
+
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

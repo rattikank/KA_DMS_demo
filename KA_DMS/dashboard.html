@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาพรวมระบบ | KA Science DMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html">
+                <div class="brand-mark">KA</div>
+                <div>
+                    <strong>KA Science</strong>
+                    <small>ระบบจัดการเอกสาร</small>
+                </div>
+            </a>
+
+            <div class="nav-label">เมนูหลัก</div>
+            <nav class="nav">
+                <a class="active" href="dashboard.html">
+                    <span class="nav-icon">▦</span>ภาพรวม
+                </a>
+                <a href="documents.html">
+                    <span class="nav-icon">▤</span>รายการเอกสาร
+                </a>
+                <a href="upload.html">
+                    <span class="nav-icon">＋</span>เพิ่มเอกสาร
+                </a>
+                <a href="users.html">
+                    <span class="nav-icon">♙</span>จัดการผู้ใช้งาน
+                </a>
+                <a href="audit-logs.html">
+                    <span class="nav-icon">◷</span>ประวัติการใช้งาน
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                ระบบจัดการเอกสารอย่างปลอดภัย<br>
+                เวอร์ชันสำหรับพัฒนา
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div class="breadcrumb">
+                    KA Science
+                    <span style="padding:0 7px;color:#b7c4d5">/</span>
+                    ภาพรวมระบบ
+                </div>
+
+                <div class="top-user">
+                    <div class="avatar" id="dashboardAvatar">ผด</div>
+                    <div>
+                        <strong id="dashboardUserName">กำลังโหลด...</strong>
+                        <small id="dashboardUserRole">กำลังตรวจสอบบัญชี</small>
+                    </div>
+                    <a class="btn btn-light btn-small"
+                       href="Backend/LogoutHandler.ashx"
+                       id="logoutButton"
+                       title="ออกจากระบบ">
+                        ออกจากระบบ
+                    </a>
+                </div>
+            </header>
+
+            <section class="content">
+                <div class="page-heading">
+                    <div>
+                        <h1>ภาพรวมระบบ</h1>
+                        <p>จัดการเอกสารของบริษัท KA Science ได้อย่างสะดวกและปลอดภัย</p>
+                    </div>
+                </div>
+
+                <div id="dashboardMessage" role="status" aria-live="polite"></div>
+
+                <!-- สถิติจากฐานข้อมูลจริง -->
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-top">
+                            <span>เอกสารทั้งหมด</span>
+                            <span class="stat-icon">▤</span>
+                        </div>
+                        <strong id="dashDocumentCount">—</strong>
+                        <small>เอกสารที่ยังไม่ถูกลบ</small>
+                    </div>
+
+                    <div class="stat">
+                        <div class="stat-top">
+                            <span>เพิ่มเดือนนี้</span>
+                            <span class="stat-icon">＋</span>
+                        </div>
+                        <strong id="dashMonthlyDocuments">—</strong>
+                        <small>เอกสารที่เพิ่มในเดือนปัจจุบัน</small>
+                    </div>
+
+                    <div class="stat">
+                        <div class="stat-top">
+                            <span>ผู้ใช้งาน</span>
+                            <span class="stat-icon">♙</span>
+                        </div>
+                        <strong id="dashActiveUsers">—</strong>
+                        <small>บัญชีผู้ใช้ที่เปิดใช้งาน</small>
+                    </div>
+
+                    <div class="stat">
+                        <div class="stat-top">
+                            <span>กิจกรรมวันนี้</span>
+                            <span class="stat-icon">◷</span>
+                        </div>
+                        <strong id="dashTodayActivities">—</strong>
+                        <small>รายการกิจกรรมที่บันทึกวันนี้</small>
+                    </div>
+                </div>
+
+                <div class="two-col">
+                    <!-- เอกสารล่าสุด -->
+                    <section class="panel">
+                        <div class="panel-title">
+                            <div>
+                                <h2>เอกสารที่เพิ่มล่าสุด</h2>
+                                <p>รายการเอกสารจากฐานข้อมูล</p>
+                            </div>
+                            <a class="btn btn-light btn-small" href="documents.html">
+                                ดูทั้งหมด
+                            </a>
+                        </div>
+
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ชื่อเอกสาร</th>
+                                        <th>แผนก</th>
+                                        <th>วันที่เพิ่ม</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recentDocumentsBody">
+                                    <tr>
+                                        <td colspan="3">กำลังโหลดข้อมูล...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- กิจกรรมล่าสุด -->
+                    <section class="panel">
+                        <div class="panel-title">
+                            <div>
+                                <h2>กิจกรรมล่าสุด</h2>
+                                <p>ประวัติการใช้งานจากฐานข้อมูล</p>
+                            </div>
+                        </div>
+
+                        <div class="activity-list" id="recentActivitiesBody">
+                            <div class="activity">
+                                <div class="activity-dot">…</div>
+                                <div>
+                                    <strong>กำลังโหลดกิจกรรม</strong>
+                                    <small>กรุณารอสักครู่</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

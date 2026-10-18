@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>จัดการผู้ใช้งาน | KA Science DMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html">
+      <div class="brand-mark">KA</div>
+      <div><strong>KA Science</strong><small>ระบบจัดการเอกสาร</small></div>
+    </a>
+    <div class="nav-label">เมนูหลัก</div>
+    <nav class="nav"><a class="" href="dashboard.html"><span class="nav-icon">▦</span>ภาพรวม</a>
+<a class="" href="documents.html"><span class="nav-icon">▤</span>รายการเอกสาร</a>
+<a class="" href="upload.html"><span class="nav-icon">＋</span>เพิ่มเอกสาร</a>
+<a class="active" href="users.html"><span class="nav-icon">♙</span>จัดการผู้ใช้งาน</a>
+<a class="" href="audit-logs.html"><span class="nav-icon">◷</span>ประวัติการใช้งาน</a></nav>
+    <div class="sidebar-bottom">ระบบจัดการเอกสารอย่างปลอดภัย<br>เวอร์ชันตัวอย่างสำหรับพัฒนา</div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="breadcrumb">KA Science <span style="padding:0 7px;color:#b7c4d5">/</span> จัดการผู้ใช้งาน</div>
+      <div class="top-user">
+        <div class="avatar">ผด</div>
+        <div><strong>ผู้ดูแลระบบ</strong><small>ผู้ดูแลระบบ</small></div>
+        <a class="btn btn-light btn-small" href="login.html" title="ออกจากระบบ">ออกจากระบบ</a>
+      </div>
+    </header>
+    <section class="content">
+      <div class="page-heading"><div><h1>จัดการผู้ใช้งาน</h1><p>ดูแลบัญชีผู้ใช้งานและกำหนดสิทธิ์ตามหน้าที่</p></div></div>
+      
+<section class="panel">
+  <div class="panel-title"><div><h2>บัญชีผู้ใช้งาน</h2><p>จัดการบัญชี แผนก และสิทธิ์การเข้าถึงระบบ</p></div><button type="button" onclick="alert('ตัวอย่างเท่านั้น: แบบฟอร์มเพิ่มผู้ใช้จะเชื่อม backend ภายหลัง')">＋ เพิ่มผู้ใช้งาน</button></div>
+  <div class="search-row"><input type="search" data-table-search placeholder="ค้นหาชื่อผู้ใช้งาน อีเมล หรือแผนก..."><select><option value="">ทุกสิทธิ์</option><option>ผู้ดูแลระบบ</option><option>ฝ่ายขาย</option><option>จัดซื้อ</option></select></div>
+  <div class="table-wrap"><table><thead><tr><th>ชื่อผู้ใช้งาน</th><th>อีเมล</th><th>แผนก</th><th>สิทธิ์</th><th>สถานะ</th><th>จัดการ</th></tr></thead><tbody id="usersTableBody">
+    <tr data-search-row><td colspan="6">กำลังโหลดข้อมูล...</td></tr>
+  </tbody></table></div>
+  <div class="note" style="margin-top:18px">หมายเหตุ: ชื่อ อีเมล และบัญชีทั้งหมดเป็นข้อมูลสมมติสำหรับออกแบบหน้าจอ ไม่ใช่ข้อมูลผู้ใช้งานจริง</div>
+</section>
+
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

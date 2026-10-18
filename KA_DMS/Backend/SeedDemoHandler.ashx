@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" Class="KA_DMS.SeedDemoHandler" %>

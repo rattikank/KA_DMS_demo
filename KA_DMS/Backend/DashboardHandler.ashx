@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="DashboardHandler.ashx.cs" Class="KA_DMS.DashboardHandler" %>

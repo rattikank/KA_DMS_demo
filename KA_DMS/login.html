@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เข้าสู่ระบบ | KA Science DMS</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-page">
+  <section class="login-side">
+    <a class="brand" href="login.html"><div class="brand-mark">KA</div><div><strong>KA Science</strong><small>ระบบจัดการเอกสาร</small></div></a>
+    <h1>จัดการเอกสาร<br>ง่ายขึ้น ปลอดภัยขึ้น</h1>
+    <p>ศูนย์กลางสำหรับจัดเก็บ ค้นหา และจัดการเอกสารสำคัญของบริษัทในที่เดียว</p>
+    <div class="login-features"><span>ค้นหาเอกสารได้สะดวกรวดเร็ว</span><span>จัดการสิทธิ์การเข้าถึงตามหน้าที่</span><span>ตรวจสอบประวัติการใช้งานได้</span></div>
+  </section>
+  <section class="login-area">
+      <form class="login-card" id="loginForm">
+          <h2>ยินดีต้อนรับ</h2><p>เข้าสู่ระบบเพื่อเริ่มใช้งาน</p>
+          <div class="field"><label for="username">ชื่อผู้ใช้หรืออีเมล</label><input id="username" name="username" type="text" placeholder="กรอกชื่อผู้ใช้หรืออีเมล" required></div>
+          <div class="field"><label for="password">รหัสผ่าน</label><div class="password-wrap"><input id="password" name="password" type="password" placeholder="กรอกรหัสผ่าน" required><button class="show-password" type="button" data-toggle-password>แสดง</button></div></div>
+          <button type="submit">เข้าสู่ระบบ <span>→</span></button>
+          <div id="loginMessage" role="status"></div>
+          <div class="login-help">หากไม่สามารถเข้าสู่ระบบได้<br>กรุณาติดต่อผู้ดูแลระบบของบริษัท</div>
+          <div class="footer-note">© KA Science · ระบบจัดการเอกสารอย่างปลอดภัย</div>
+      </form>
+  </section>
+</div>
+<script src="app.js"></script>
+</body></html>
